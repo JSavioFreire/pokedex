@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useFetch } from "../../hook/useFetch"
+import bug from '../../assets/bug.png'
 
 const Pokemon = ({ url }) => {
 
@@ -10,7 +11,7 @@ const Pokemon = ({ url }) => {
         data && setType(data['types'][0].type.name)
     },[data])
 
-    console.log(data)
+    
 
     
     return (
@@ -18,6 +19,7 @@ const Pokemon = ({ url }) => {
             {data && (
                 <>
                     <h1>{data['name']}</h1>
+                    <img className="type" src={bug}/>
                     <div className="flex">
                         <img src={data['sprites'].other.dream_world.front_default} />
                     </div>

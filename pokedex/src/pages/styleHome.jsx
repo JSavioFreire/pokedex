@@ -23,6 +23,10 @@ export const HomeS = styled.section`
         margin-top: 0;
         margin-left: 10px;
     }
+    .type{
+        width: 20px;
+        height: 20px;
+    }
     .flex{
         display: flex;
         align-items: center;
