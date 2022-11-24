@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useFetch } from "../../hook/useFetch"
 import Types from "../types/types"
 
+
 const Pokemon = ({ url }) => {
 
     const { data, loading, error } = useFetch(url)
