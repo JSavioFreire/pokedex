@@ -6,24 +6,33 @@ const Pokemon = ({ url }) => {
 
     const { data, loading, error } = useFetch(url)
     const [type, setType] = useState('')
+    const [typeTwo, setTypeTwo] = useState('')
 
     useEffect(() => {
-        data && setType(data['types'][0].type.name)
+        if(data){
+            setType(data['types'][0].type.name)
+            if(data['types'].length >= 2){
+                setTypeTwo(data['types'][1].type.name)
+            }
+        }
     }, [data])
 
-
+    
+  
 
     return (
         <div className="pok">
+            {loading && <p>Carregando</p>}
             {data && (
                 <>
-                    <h1>{data['name']}</h1>
-                    <img src="assets/bug.png" alt="typs" />
-                    <div><Types /></div>
+                    <header className="headerCard">
+                        <h1>{data['name']}</h1>
+                        <h2>N° {data.id}</h2>
+                        <div><Types type={type} typeTwo={typeTwo} /></div>
+                    </header>
                     <div className="flex">
                         <img src={data['sprites'].other.dream_world.front_default} />
                     </div>
-                    <p>Tipo: {type}</p>
                 </>
             )}
         </div>

@@ -4,23 +4,26 @@ import Home from './pages/Home'
 import Header from './components/header/Header'
 import NavBar from './components/navbar/NavBar'
 import { url } from './url/url'
-import { Global } from './global/GlobalStyle'
+import { Global, theme } from './global/GlobalStyle'
+import { ThemeProvider } from 'styled-components'
 
 
 
 function App() {
 
   const { data, loading, error } = useFetch(url)
-  
+
   return (
-    <BrowserRouter>
-    <Global/>
-      <Header />
-      <NavBar />
-      <Routes>
-        <Route path='/' element={<Home data={data} />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Global />
+        <Header />
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home data={data} />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 
