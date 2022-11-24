@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useFetch } from "../../hook/useFetch"
 import Types from "../types/types"
-
+import pokeboll from '../../components/loading.png'
 
 const Pokemon = ({ url }) => {
 
@@ -23,7 +23,7 @@ const Pokemon = ({ url }) => {
 
     return (
         <div className="pok">
-            {loading && <p>Carregando</p>}
+            {loading && <><img className="test" src={pokeboll} /></>}
             {data && (
                 <>
                     <header className="headerCard">

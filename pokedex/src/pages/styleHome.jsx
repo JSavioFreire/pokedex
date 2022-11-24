@@ -64,4 +64,19 @@ export const HomeS = styled.section`
         width: 80%;
         max-height: 200px;
     }
+    .test{
+        width: 100px;
+        height: 100px;
+        animation: whell 1s infinite;
+        
+    }
+    @keyframes whell {
+        0% {
+            transform: rotate(0deg);
+        }
+       
+        100%{
+            transform: rotate(360deg);
+        }
+    }
 `
