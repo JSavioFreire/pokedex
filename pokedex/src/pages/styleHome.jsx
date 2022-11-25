@@ -8,10 +8,9 @@ export const HomeS = styled.section`
     margin: 0 auto;
     flex-wrap: wrap;
     color: ${(props) => props.theme.colors.write};
-    background-color: ${({ theme }) => theme.colors.background};
     .pok{
         width: 20%;
-        min-width: 200px;
+        min-width: 240px;
         height: 250px;
         background-color: #F4F4F4;
         border-radius: 20px;
@@ -24,6 +23,8 @@ export const HomeS = styled.section`
         flex-direction: column;
         cursor: pointer;
         transition: .2s;
+        box-shadow: 3px 3px 10px #22222255;
+
         :hover{
             margin-top: -20px;
         }
@@ -47,6 +48,8 @@ export const HomeS = styled.section`
         width: 30px;
         height: 30px;
         margin: 0 5px;
+        box-shadow: 3px 3px 10px #33333355;
+        border-radius: 50%;
        
     }
     .flex{

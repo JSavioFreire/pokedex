@@ -6,7 +6,7 @@ export const Global = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        background-color: #756F77;
+        background-color: ${({ theme }) => theme.colors.background};
     }
 `
 
@@ -15,7 +15,7 @@ export const theme = {
         background:'#414141',
         write:'#CCCCCC',
         writeDark:'#8C8C8C',
-        backgroudDark:'#333333'
+        backgroundDark:'#333333'
     }
 }
 
