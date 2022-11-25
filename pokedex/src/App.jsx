@@ -12,6 +12,8 @@ import Pokemons from './pages/pokemons/Pokemons'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 
+import { PokemonsContextProvider } from './context/PokemonsContext'
+
 import { changeUrl } from './url/url'
 import { urlMoreName } from './url/url'
 
@@ -26,16 +28,18 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Global />
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home data={data} qtd={qtd} setQtd={setQtd} />} />
-          <Route path='/surpresa' element={<Surpresa />} />
-          <Route path='/pokemons' element={<Pokemons />} />
-        </Routes>
-        <Footer urlMoreName={urlMoreName} />
-      </BrowserRouter>
+      <PokemonsContextProvider>
+        <BrowserRouter>
+          <Global />
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home data={data} qtd={qtd} setQtd={setQtd} />} />
+            <Route path='/surpresa' element={<Surpresa />} />
+            <Route path='/pokemons' element={<Pokemons />} />
+          </Routes>
+          <Footer urlMoreName={urlMoreName} />
+        </BrowserRouter>
+      </PokemonsContextProvider>
     </ThemeProvider>
   )
 }

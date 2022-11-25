@@ -28,8 +28,9 @@ const Header = () => {
         <nav>
           <ul>
             <li><NavLink to='/'>Pokemons</NavLink></li>
-            <li><NavLink to='/surpresa'>Surpreenda-me</NavLink>
-            </li>
+            <li><NavLink to='/surpresa'>Surpreenda-me</NavLink></li>
+            <li>Favoritos</li>
+            
           </ul>
         </nav>
       </section>

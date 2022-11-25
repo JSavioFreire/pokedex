@@ -19,7 +19,7 @@ export const HeaderS = styled.header`
         display: flex;  
         align-items: center;
         justify-content: space-between;
-        width: 250px;
+        width: 300px;
     }
     li{
         list-style: none;
