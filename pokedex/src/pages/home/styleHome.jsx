@@ -4,19 +4,36 @@ export const HomeS = styled.section`
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    margin: 0 auto;
+    justify-content: center;
+    margin: 20px auto;
     flex-wrap: wrap;
     color: ${(props) => props.theme.colors.write};
+
+    .all{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    button{
+        margin-top: 30px;
+        cursor: pointer;
+        background-color: ${({theme}) => theme.colors.pokeball};
+        color: ${({theme}) => theme.colors.write};
+        border: 0;
+        padding: 10px 20px;
+        border-radius: 10px;
+        outline: 3px solid #37474F;
+
+    }
     .pok{
         width: 20%;
         min-width: 240px;
         height: 250px;
-        background-color: #F4F4F4;
         border-radius: 20px;
         margin: 15px;
         padding: 5px;
-        background-color: #4D4D4D;
+        background-color: ${({theme}) => theme.colors.backgroundPoke};
         display: flex;
         align-items: center;
         justify-content: center;
@@ -24,7 +41,8 @@ export const HomeS = styled.section`
         cursor: pointer;
         transition: .2s;
         box-shadow: 3px 3px 10px #22222255;
-
+        color: ${({theme}) => theme.colors.write};
+        text-decoration: none;
         :hover{
             margin-top: -20px;
         }
@@ -64,8 +82,8 @@ export const HomeS = styled.section`
         justify-content: center;
     }
     img{
-        width: 80%;
-        max-height: 200px;
+        width: 200px;
+        max-height: 300px;
     }
     .test{
         width: 100px;
@@ -83,3 +101,4 @@ export const HomeS = styled.section`
         }
     }
 `
+

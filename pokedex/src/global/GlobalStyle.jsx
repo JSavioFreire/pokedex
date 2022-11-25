@@ -7,15 +7,28 @@ export const Global = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         background-color: ${({ theme }) => theme.colors.background};
+        ::-webkit-scrollbar-track {
+            background-color: ${({theme}) => theme.colors.background};
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: ${({theme}) => theme.colors.pokeball};
+            border-radius: 10px;
+        }
     }
 `
 
 export const theme = {
-    colors:{
-        background:'#414141',
-        write:'#CCCCCC',
-        writeDark:'#8C8C8C',
-        backgroundDark:'#333333'
+    colors: {
+        background: '#414141',
+        write: '#CCCCCC',
+        writeDark: '#8C8C8C',
+        backgroundDark: '#333333',
+        pokeball: '#DD2C00',
+        backgroundPoke: '#4D4D4D'
+
     }
 }
 
