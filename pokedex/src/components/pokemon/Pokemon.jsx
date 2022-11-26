@@ -10,13 +10,16 @@ const Pokemon = ({ url }) => {
     const { data, loading } = useFetch(url)
     const [type, setType] = useState('')
     const [typeTwo, setTypeTwo] = useState('')
-    const { setPokeContext } = useContext(PokemonsContext)
+    const { setPokeContext, setPokeTeamContext, pokeTeamContext } = useContext(PokemonsContext)
 
     const handlePokemonContext = () => {
         setPokeContext(url)
     }
+    const handleAddTeam = (e) =>{
+        e.preventDefault()
+        setPokeTeamContext([...pokeTeamContext, data])
+    }
 
-   
     useEffect(() => {
         if (data) {
             setType(data['types'][0].type.name)
@@ -39,6 +42,7 @@ const Pokemon = ({ url }) => {
                     <div className="flex">
                         <img src={data['sprites'].other['official-artwork'].front_default} />
                     </div>
+                    <button onClick={handleAddTeam}>Adicionar ao time</button>
                 </>
             )}
         </Link>

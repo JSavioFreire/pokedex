@@ -34,7 +34,7 @@ export const HomeS = styled.section`
     .pok{
         width: 20%;
         min-width: 240px;
-        height: 250px;
+        height: 320px;
         border-radius: 20px;
         margin: 15px;
         padding: 5px;

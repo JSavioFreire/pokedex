@@ -19,11 +19,10 @@ export const PokemonsS = styled.section`
         width: 80%;
     }
     .about{
-        
+        width: 50%;
     }
     .image{
-        
-
+        width: 50%;
     }
     .types{
         text-transform: capitalize;

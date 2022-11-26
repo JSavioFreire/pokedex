@@ -11,6 +11,7 @@ import Pokemons from './pages/pokemons/Pokemons'
 
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
+import MyTeam from './components/myTeam/MyTeam'
 
 import { PokemonsContextProvider } from './context/PokemonsContext'
 
@@ -36,6 +37,7 @@ function App() {
             <Route path='/' element={<Home data={data} loading={loading} qtd={qtd} setQtd={setQtd} />} />
             <Route path='/surpresa' element={<Surpresa />} />
             <Route path='/pokemons' element={<Pokemons />} />
+            <Route path='/myteam' element={<MyTeam />} />
           </Routes>
           <Footer urlMoreName={urlMoreName} />
         </BrowserRouter>
