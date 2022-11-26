@@ -9,6 +9,7 @@ export const FooterS = styled.footer`
     align-items: center;
     justify-content: space-around;
 
+
     div{
         width: 33.3%;
         display: flex;
