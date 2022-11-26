@@ -6,7 +6,7 @@ export const PokemonsS = styled.section`
     color: ${({theme}) => theme.colors.write};
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
 
     h1{
@@ -16,6 +16,7 @@ export const PokemonsS = styled.section`
     .all{
         display: flex;
         justify-content: space-around;
+        width: 80%;
     }
     .about{
         
@@ -29,16 +30,5 @@ export const PokemonsS = styled.section`
     }
     .animate{
         width: 80px;
-    }
-    button{
-        width: 120px;
-        height: 40px;
-        background-color: ${({theme}) => theme.colors.pokeball};
-        color: ${({theme}) => theme.colors.write};
-        outline: 3px solid #37474F;
-        border: 0;
-        border-radius: 10px;
-        cursor: pointer;
-        margin: 50px 0; 
     }
 `

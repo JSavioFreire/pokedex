@@ -24,7 +24,7 @@ function App() {
     setQtd(905)
   }
 
-  const { data } = useFetch(changeUrl(qtd))
+  const { data, loading } = useFetch(changeUrl(qtd))
 
   return (
     <ThemeProvider theme={theme}>
@@ -33,7 +33,7 @@ function App() {
           <Global />
           <Header />
           <Routes>
-            <Route path='/' element={<Home data={data} qtd={qtd} setQtd={setQtd} />} />
+            <Route path='/' element={<Home data={data} loading={loading} qtd={qtd} setQtd={setQtd} />} />
             <Route path='/surpresa' element={<Surpresa />} />
             <Route path='/pokemons' element={<Pokemons />} />
           </Routes>

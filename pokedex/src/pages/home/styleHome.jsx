@@ -26,6 +26,11 @@ export const HomeS = styled.section`
         outline: 3px solid #37474F;
 
     }
+    .loading{
+        width: 300px;
+        margin-top: 100px;
+        animation: whell 1s infinite;
+    }
     .pok{
         width: 20%;
         min-width: 240px;
