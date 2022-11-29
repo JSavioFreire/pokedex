@@ -8,6 +8,7 @@ export const FooterS = styled.footer`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 150px;
 
 
     div{

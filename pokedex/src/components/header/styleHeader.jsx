@@ -8,6 +8,9 @@ export const HeaderS = styled.header`
     align-items: center;
     justify-content: center;
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     section{
         display: flex;
@@ -23,6 +26,7 @@ export const HeaderS = styled.header`
     }
     li{
         list-style: none;
+        position: relative;
     }
     img{
         width: 100px;
@@ -54,6 +58,20 @@ export const HeaderS = styled.header`
 
         }
     }
+    .qtdMyTeam{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #EB2F00;
+        border: 1px solid white;
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .bt{
         width: 15%;
         margin-left: 10px;
@@ -63,5 +81,8 @@ export const HeaderS = styled.header`
         outline: 3px solid #37474F;
         border: 0;
 
+    }
+    .alert{
+        background-color: red;
     }
 `

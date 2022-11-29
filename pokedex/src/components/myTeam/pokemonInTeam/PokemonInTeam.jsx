@@ -1,11 +1,6 @@
 import { FiDelete } from 'react-icons/fi';
 
-
 const PokemonInTeam = ({ name, image, typeOne, typeTwo, hadleDelete }) => {
-
-
-
-
     return (
         <div className='pokemonInTeam'>
             <img src={image} />

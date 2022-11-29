@@ -1,14 +1,11 @@
 import Pokemon from "../../components/pokemon/Pokemon"
-
 import { HomeS } from "./styleHome"
 
 const Home = ({ data, qtd, setQtd, loading }) => {
 
-
     return (
         <>
             <HomeS>
-
                 {loading && <div>
                     <img className="loading" src='/loading.png' />
                 </div>}

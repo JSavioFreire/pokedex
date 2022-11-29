@@ -3,9 +3,10 @@ import { createGlobalStyle } from "styled-components";
 export const Global = createGlobalStyle`
     body{
         font-family: 'PT Sans', sans-serif;
-        margin: 0;
+        margin: 150px 0 0 0;
         padding: 0;
         box-sizing: border-box;
+        position: relative;
         background-color: ${({ theme }) => theme.colors.background};
         ::-webkit-scrollbar-track {
             background-color: ${({theme}) => theme.colors.background};
@@ -17,7 +18,13 @@ export const Global = createGlobalStyle`
             background: ${({theme}) => theme.colors.pokeball};
             border-radius: 10px;
         }
+
+        .disabled{
+        background-color: gray;
+        cursor: default;
     }
+    }
+    
 `
 
 export const theme = {
@@ -30,5 +37,7 @@ export const theme = {
         backgroundPoke: '#4D4D4D'
 
     }
+    
 }
+
 

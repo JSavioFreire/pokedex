@@ -8,15 +8,11 @@ const MyTeam = () => {
 
     const { pokeTeamContext, setPokeTeamContext } = useContext(PokemonsContext)
 
-
     const hadleDelete = (name) => {
 
         setPokeTeamContext(pokeTeamContext.filter((el)=>{
-            if(el.name !== name){
-                return el
-            }
-        })
-        )
+            if(el.name !== name) return el
+        }))
     }
 
     return (

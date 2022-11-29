@@ -8,6 +8,7 @@ export const HomeS = styled.section`
     margin: 20px auto;
     flex-wrap: wrap;
     color: ${(props) => props.theme.colors.write};
+    margin-top: 130px;
 
     .all{
         display: flex;
@@ -96,14 +97,15 @@ export const HomeS = styled.section`
         animation: whell 1s infinite;
         
     }
+
     @keyframes whell {
         0% {
             transform: rotate(0deg);
         }
-       
         100%{
             transform: rotate(360deg);
         }
     }
+   
 `
 

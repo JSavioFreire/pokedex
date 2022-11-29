@@ -30,4 +30,16 @@ export const PokemonsS = styled.section`
     .animate{
         width: 80px;
     }
+    button{
+    width: 120px;
+    height: 40px;
+    background-color: ${({ theme }) => theme.colors.pokeball};
+    color: ${({ theme }) => theme.colors.write};
+    outline: 3px solid #37474F;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 50px 0; 
+    
+}
 `

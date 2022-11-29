@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import SinglePokemon from "../../components/singlePokemon/SinglePokemon"
 import { SinglePokemonS } from "../../components/singlePokemon/styleSinglePokemon"
 
-
 const Surpresa = () => {
 
   const [random, setRandom] = useState(0)
@@ -19,7 +18,7 @@ const Surpresa = () => {
   return (
     <SinglePokemonS>
       <SinglePokemon data={data} />
-      <button onClick={() => setRandom(Math.floor(Math.random() * (905 - 1) + 1))}>Buscar outro</button>
+      <button>Buscar outro</button>
     </SinglePokemonS>
   )
 }

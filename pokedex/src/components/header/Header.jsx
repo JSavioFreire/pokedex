@@ -2,9 +2,12 @@ import { HeaderS } from "./styleHeader"
 import pokeball from '/pokeball.png'
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
+import { useContext } from "react"
+import { PokemonsContext } from "../../context/PokemonsContext"
 
 const Header = () => {
 
+  const { pokeTeamContext } = useContext(PokemonsContext)
   const [inputText, setInputText] = useState('')
 
   const handleSearch = (e) => {
@@ -29,7 +32,16 @@ const Header = () => {
           <ul>
             <li><NavLink to='/'>Pokemons</NavLink></li>
             <li><NavLink to='/surpresa'>Surpreenda-me</NavLink></li>
-            <li><NavLink to='/myteam'>Meu Time</NavLink></li>
+            <li><NavLink to='/myteam'>
+              Meu Time
+              <div className="qtdMyTeam">
+                <p>
+                  {pokeTeamContext.length}
+                </p>
+              </div>
+            </NavLink>
+
+            </li>
           </ul>
         </nav>
       </section>
