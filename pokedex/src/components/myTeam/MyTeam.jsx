@@ -6,9 +6,26 @@ import PokemonInTeam from "./pokemonInTeam/PokemonInTeam"
 
 const MyTeam = () => {
 
-    const { pokeTeamContext } = useContext(PokemonsContext)
+    const { pokeTeamContext, setPokeTeamContext } = useContext(PokemonsContext)
 
-    console.log(pokeTeamContext)
+
+    const hadleDelete = (name) => {
+
+        pokeTeamContext.forEach((el, index) => {
+            
+            if(el.name == name){
+                pokeTeamContext.filter((e) => {
+                    console.log(e.name)
+                })
+            }
+            
+            
+        });
+            
+        
+
+    }
+
     return (
         <MyTeamS>
             <h1>Meu Time</h1>
@@ -21,13 +38,13 @@ const MyTeam = () => {
                     :
                     pokeTeamContext.length <= 6 ?
                         pokeTeamContext.map((pokemonInTeam) => (
-                            <PokemonInTeam key={pokemonInTeam.id} name={pokemonInTeam.name} image={pokemonInTeam['sprites'].other['official-artwork'].front_default}/>
-                            ))
-                    :
-                            <>mais de 6 pokemons</>
-                    
+                            <PokemonInTeam key={pokemonInTeam.id} name={pokemonInTeam.name} image={pokemonInTeam['sprites'].other['official-artwork'].front_default} typeOne={pokemonInTeam['types']['0'].type.name} typeTwo={pokemonInTeam['types'].length > 1 && pokemonInTeam['types']['1'].type.name} hadleDelete={hadleDelete} />
+                        ))
+                        :
+                        <>mais de 6 pokemons</>
 
-                    
+
+
                 }
 
             </div>

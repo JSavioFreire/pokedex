@@ -22,18 +22,24 @@ export const MyTeamS = styled.div`
         width: 90%;
         background-color: ${({theme}) => theme.colors.background};
         border-radius: 20px;
-        padding-left: 20px;
+        padding: 0 20px;
         margin: 5px auto;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         color:${({theme}) => theme.colors.write};
         text-transform: capitalize;
-        
 
         img{
             width: 80px;
         }
-        
+        span{
+            text-transform: lowercase;
+        }
+        .del{
+            margin-top: 12px;
+            color: ${({theme}) => theme.colors.pokeball};
+            font-size: 25px;
+        }
     }
 `
