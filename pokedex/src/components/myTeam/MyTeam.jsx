@@ -11,19 +11,12 @@ const MyTeam = () => {
 
     const hadleDelete = (name) => {
 
-        pokeTeamContext.forEach((el, index) => {
-            
-            if(el.name == name){
-                pokeTeamContext.filter((e) => {
-                    console.log(e.name)
-                })
+        setPokeTeamContext(pokeTeamContext.filter((el)=>{
+            if(el.name !== name){
+                return el
             }
-            
-            
-        });
-            
-        
-
+        })
+        )
     }
 
     return (
