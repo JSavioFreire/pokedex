@@ -14,7 +14,7 @@ const Home = ({ data, qtd, setQtd, loading }) => {
                         <Pokemon key={pokemon.name} pokemon={pokemon} url={pokemon.url} />
                     ))}
                 </div>
-                {qtd == 905 ? <></> : <button onClick={() => setQtd(qtd + 100)}>Ver mais</button>}
+                {qtd == 905 ? <></> : <button className="verM" onClick={() => setQtd(qtd + 100)}>Ver mais</button>}
             </HomeS>
         </>
     )

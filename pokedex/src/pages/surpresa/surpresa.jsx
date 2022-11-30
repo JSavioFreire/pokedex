@@ -22,7 +22,6 @@ const Surpresa = () => {
   return (
     <SinglePokemonS>
       <SinglePokemon data={data} />
-      <button onClick={ran}>Buscar outro</button>
     </SinglePokemonS>
   )
 }

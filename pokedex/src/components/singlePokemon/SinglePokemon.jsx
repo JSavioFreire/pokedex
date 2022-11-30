@@ -46,13 +46,12 @@ const SinglePokemon = ({ data }) => {
                             <h2>Evoluções</h2>
                             {urlEvolve && (
 
-                                <>
+                                <div className="evol">
                                     <SingleEvolutionPokemon urlEvolve={urlEvolve.chain.species.name} />
                                     {urlEvolve.chain['evolves_to'].length < 2 ?
                                         <>
                                             <SingleEvolutionPokemon urlEvolve={urlEvolve.chain['evolves_to'].length != 0 && urlEvolve.chain['evolves_to'] && urlEvolve.chain['evolves_to']['0']['species'].name} />
                                             <SingleEvolutionPokemon urlEvolve={urlEvolve.chain['evolves_to'].length != 0 && urlEvolve.chain['evolves_to']['0']['evolves_to']['0'] && urlEvolve.chain['evolves_to']['0']['evolves_to']['0']['species'].name} />
-
                                         </>
                                         :
                                         <>
@@ -63,11 +62,10 @@ const SinglePokemon = ({ data }) => {
                                             ))}
                                         </>
                                     }
-                                </>
+                                </div>
                             )
                             }
                         </div>
-                        <img src={data['sprites']['versions']['generation-v']['black-white']['animated'].front_default} />
                         <ButtonAdd data={data} />
                     </div>
                     <div className="image">

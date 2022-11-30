@@ -39,7 +39,7 @@ const Pokemon = ({ url }) => {
                     <div className="flex">
                         <img src={data['sprites'].other['official-artwork'].front_default} />
                     </div>
-                    <ButtonAdd data={data}/>
+                    <ButtonAdd data={data} />
                 </>
             )}
         </Link>

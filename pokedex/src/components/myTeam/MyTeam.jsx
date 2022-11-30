@@ -31,11 +31,7 @@ const MyTeam = () => {
                         ))
                         :
                         <>mais de 6 pokemons</>
-
-
-
                 }
-
             </div>
         </MyTeamS>
     )

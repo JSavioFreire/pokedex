@@ -9,24 +9,25 @@ export const HomeS = styled.section`
     flex-wrap: wrap;
     color: ${(props) => props.theme.colors.write};
     margin-top: 130px;
-
+    
+    .verM{
+    cursor: pointer;
+    background-color: ${({ theme }) => theme.colors.pokeball};
+    color: ${({ theme }) => theme.colors.write};
+    border: 0;
+    padding: 10px 10px;
+    border-radius: 10px;
+    outline: 3px solid #37474F;
+    margin-top: 50px;
+    margin-bottom: -90px;
+    }
     .all{
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    button{
-        margin-top: 30px;
-        cursor: pointer;
-        background-color: ${({theme}) => theme.colors.pokeball};
-        color: ${({theme}) => theme.colors.write};
-        border: 0;
-        padding: 10px 20px;
-        border-radius: 10px;
-        outline: 3px solid #37474F;
-
-    }
+    
     .loading{
         width: 300px;
         margin-top: 100px;
@@ -34,12 +35,11 @@ export const HomeS = styled.section`
     }
     .pok{
         width: 20%;
-        min-width: 240px;
         height: 320px;
         border-radius: 20px;
         margin: 15px;
         padding: 5px;
-        background-color: ${({theme}) => theme.colors.backgroundPoke};
+        background-color: ${({ theme }) => theme.colors.backgroundPoke};
         display: flex;
         align-items: center;
         justify-content: center;
@@ -47,7 +47,7 @@ export const HomeS = styled.section`
         cursor: pointer;
         transition: .2s;
         box-shadow: 3px 3px 10px #22222255;
-        color: ${({theme}) => theme.colors.write};
+        color: ${({ theme }) => theme.colors.write};
         text-decoration: none;
         :hover{
             margin-top: -20px;
