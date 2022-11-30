@@ -8,9 +8,13 @@ const Surpresa = () => {
 
   const [random, setRandom] = useState(0)
 
-  useEffect(() => {
+  const ran = () => {
     setRandom(Math.floor(Math.random() * (905 - 1) + 1))
+  }
+  useEffect(() => {
+    ran()
   }, [])
+
   const { data } = useFetch(urlMoreName + random)
 
   console.log(urlMoreName + random)
@@ -18,7 +22,7 @@ const Surpresa = () => {
   return (
     <SinglePokemonS>
       <SinglePokemon data={data} />
-      <button>Buscar outro</button>
+      <button onClick={ran}>Buscar outro</button>
     </SinglePokemonS>
   )
 }

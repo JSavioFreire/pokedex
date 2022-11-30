@@ -13,6 +13,11 @@ export const PokemonsS = styled.section`
         text-transform: capitalize;
         font-size: 40px;
     }
+    .nameId{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
     .all{
         display: flex;
         justify-content: space-around;
