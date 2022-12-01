@@ -10,7 +10,7 @@ button{
     color: ${({ theme }) => theme.colors.write};
     border: 0;
     padding: 10px;
-    width: 180px;
+    width: 200px;
     border-radius: 10px;
     outline: 3px solid #37474F;
 }

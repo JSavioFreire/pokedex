@@ -45,18 +45,10 @@ export const PokemonsS = styled.section`
     h2{
         margin-left: 50px;
     }
-    button{
-    width: 120px;
-    height: 40px;
-    background-color: ${({ theme }) => theme.colors.pokeball};
-    color: ${({ theme }) => theme.colors.write};
-    outline: 3px solid #37474F;
-    border: 0;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 50px 0; 
-    
-}
+    .margin{
+        margin-bottom: 50px;
+    }
+ 
 .evol{
     display: flex;
     align-items: center;

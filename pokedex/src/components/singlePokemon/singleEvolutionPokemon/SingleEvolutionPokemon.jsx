@@ -11,7 +11,6 @@ const SingleEvolutionPokemon = ({ urlEvolve }) => {
     const { data } = useFetch(url)
     const { setPokeContext } = useContext(PokemonsContext)
 
-
     const handlePokemonContext = () => {
         setPokeContext(url)
     }
@@ -27,8 +26,6 @@ const SingleEvolutionPokemon = ({ urlEvolve }) => {
                 </div>
             </Link>
         )
-
-
     )
 }
 

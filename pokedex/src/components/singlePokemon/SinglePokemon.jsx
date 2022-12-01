@@ -42,7 +42,7 @@ const SinglePokemon = ({ data }) => {
                             <h2>N° {data.id}</h2>
                         </div>
                         <p className="types">Tipos: {data.types['0'].type.name} {data['types'].length >= 2 && '- ' + data.types['1'].type.name}</p>
-                        <div>
+                        <div className="margin">
                             <h2>Evoluções</h2>
                             {urlEvolve && (
 
