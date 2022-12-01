@@ -17,6 +17,7 @@ import { PokemonsContextProvider } from './context/PokemonsContext'
 
 import { changeUrl } from './url/url'
 import { urlMoreName } from './url/url'
+import Search from './pages/search/Search'
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Home data={data} loading={loading} qtd={qtd} setQtd={setQtd} />} />
+            <Route path='/search' element={<Search />} />
             <Route path='/surpresa' element={<Surpresa />} />
             <Route path='/pokemons' element={<Pokemons />} />
             <Route path='/myteam' element={<MyTeam />} />

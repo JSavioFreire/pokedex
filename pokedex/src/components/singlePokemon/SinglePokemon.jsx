@@ -14,9 +14,12 @@ const SinglePokemon = ({ data }) => {
 
     const index = []
 
-    useEffect(() => {
-        evolve && setUrlEvolution(evolve['evolution_chain'].url)
+    console.log(evolve)
 
+    useEffect(() => {
+        if (evolve && evolve['evolution_chain'] != null) {
+            setUrlEvolution(evolve['evolution_chain'].url)
+        }
     }, [evolve])
 
     useEffect(() => {

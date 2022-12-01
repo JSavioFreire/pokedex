@@ -1,17 +1,21 @@
 import { HeaderS } from "./styleHeader"
 import pokeball from '/pokeball.png'
 import { NavLink } from "react-router-dom"
-import { useState } from "react"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { PokemonsContext } from "../../context/PokemonsContext"
+import { useNavigate } from "react-router-dom"
 
 const Header = () => {
 
-  const { pokeTeamContext } = useContext(PokemonsContext)
-  const [inputText, setInputText] = useState('')
+  const { pokeTeamContext, setInputText } = useContext(PokemonsContext)
+  const [val, setVal] = useState('')
+  const navigate = useNavigate()
 
   const handleSearch = (e) => {
     e.preventDefault()
+    setInputText(val)
+    navigate('./search/')
+    setVal('')
   }
 
   return (
@@ -22,9 +26,9 @@ const Header = () => {
           <input
             className="text"
             type='text'
-            value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
-            placeholder='Buscar Pokemon' />
+            value={val}
+            onChange={(e) => setVal(e.target.value)}
+            placeholder='Buscar Nome ou Número do Pokemon' />
           <input
             className="bt" type='submit' value='Buscar' />
         </form>
