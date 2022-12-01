@@ -106,6 +106,14 @@ export const HomeS = styled.section`
             transform: rotate(360deg);
         }
     }
+
+    @media screen and (max-width: 700px){
+        .pok{
+            width: 100%;
+        }
+    }
+        
+    
    
 `
 

@@ -80,4 +80,26 @@ export const PokemonsS = styled.section`
     flex-wrap: wrap;
 }
 
+@media screen and (max-width: 700px){
+
+    .all{
+        flex-direction: column;
+    }
+    .about{
+        width: 100%;
+    }
+    .image{
+        position: absolute;
+    }
+    .image img{
+        display: none;
+    }
+    .evolveEach{
+        height: 200px;
+        p{
+            font-size: 13px;
+        }
+    }
+}
+
 `

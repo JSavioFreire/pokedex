@@ -85,4 +85,15 @@ export const HeaderS = styled.header`
     .alert{
         background-color: red;
     }
+    @media screen and (max-width: 700px) {
+        section{
+            width: 95%;
+        }
+        img{
+            width: 50px;
+        }
+        nav{
+            display: none;
+        }
+    }
 `
