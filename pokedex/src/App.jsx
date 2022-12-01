@@ -12,6 +12,7 @@ import Pokemons from './pages/pokemons/Pokemons'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import MyTeam from './components/myTeam/MyTeam'
+import MenuMobile from './components/menuMobile/MenuMobile'
 
 import { PokemonsContextProvider } from './context/PokemonsContext'
 
@@ -25,7 +26,6 @@ function App() {
   if (qtd > 905) {
     setQtd(905)
   }
-
   const { data, loading } = useFetch(changeUrl(qtd))
 
   return (
@@ -34,6 +34,7 @@ function App() {
         <BrowserRouter>
           <Global />
           <Header />
+          <MenuMobile />
           <Routes>
             <Route path='/' element={<Home data={data} loading={loading} qtd={qtd} setQtd={setQtd} />} />
             <Route path='/search' element={<Search />} />

@@ -17,8 +17,6 @@ const Surpresa = () => {
 
   const { data } = useFetch(urlMoreName + random)
 
-  console.log(urlMoreName + random)
-
   return (
     <SinglePokemonS>
       <SinglePokemon data={data} />

@@ -18,6 +18,7 @@ export const Global = createGlobalStyle`
             background: ${({theme}) => theme.colors.pokeball};
             border-radius: 10px;
         }
+        overflow-x: hidden;
 
        
     }

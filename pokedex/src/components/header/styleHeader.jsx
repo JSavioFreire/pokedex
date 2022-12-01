@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderS = styled.header`
     width: 100%;
     height: 100px;
-    background-color: ${({theme}) => theme.colors.backgroundDark};
+    background-color: ${({ theme }) => theme.colors.backgroundDark};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,7 @@ export const HeaderS = styled.header`
         padding: 10px;
     }
     .active{
-        background-color: ${({theme}) => theme.colors.pokeball};
+        background-color: ${({ theme }) => theme.colors.pokeball};
         border-radius: 10px;
         outline: 3px solid #37474F;
     }
@@ -54,7 +54,7 @@ export const HeaderS = styled.header`
         padding-left: 10px;
 
         ::placeholder{
-        color: ${({theme}) => theme.colors.write};
+        color: ${({ theme }) => theme.colors.write};
 
         }
     }
@@ -76,7 +76,7 @@ export const HeaderS = styled.header`
         width: 15%;
         margin-left: 10px;
         border-radius: 10px;
-        background-color: ${({theme}) => theme.colors.pokeball};
+        background-color: ${({ theme }) => theme.colors.pokeball};
         color: white;
         outline: 3px solid #37474F;
         border: 0;
@@ -85,15 +85,31 @@ export const HeaderS = styled.header`
     .alert{
         background-color: red;
     }
+    .menu{
+        display: none;
+    }
     @media screen and (max-width: 700px) {
         section{
-            width: 95%;
+            width: 98%;
         }
         img{
             width: 50px;
         }
         nav{
             display: none;
+        }
+        .menu{
+            display: flex;
+        }
+        .text{
+            width: 70%;
+            font-size: 11px;
+        }
+        .bt{
+            width: 20%;
+        }
+        form{
+           width: 70%;
         }
     }
 `

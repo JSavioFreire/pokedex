@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom"
 import { useContext, useState } from "react"
 import { PokemonsContext } from "../../context/PokemonsContext"
 import { useNavigate } from "react-router-dom"
+import Hamburger from 'hamburger-react'
 
 const Header = () => {
-
-  const { pokeTeamContext, setInputText } = useContext(PokemonsContext)
+  const { pokeTeamContext, setInputText, isOpen, setOpen } = useContext(PokemonsContext)
   const [val, setVal] = useState('')
   const navigate = useNavigate()
 
@@ -32,6 +32,9 @@ const Header = () => {
           <input
             className="bt" type='submit' value='Buscar' />
         </form>
+        <div className="menu">
+          <Hamburger toggled={isOpen} toggle={setOpen} />
+        </div>
         <nav>
           <ul>
             <li><NavLink to='/'>Pokemons</NavLink></li>
