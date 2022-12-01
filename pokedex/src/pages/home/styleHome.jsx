@@ -5,7 +5,7 @@ export const HomeS = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px auto;
+    margin: 0 auto;
     flex-wrap: wrap;
     color: ${(props) => props.theme.colors.write};
     margin-top: 130px;

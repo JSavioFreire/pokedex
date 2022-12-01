@@ -4,15 +4,13 @@ export const MenuMobileS = styled.aside`
     .open{
         width: 100%;
         position: fixed;
-        margin-top: -40px;
         height: 100%;
         background-color: #202124c1;
         transition: .5s;
     }
     .close{
         transition: .5s;
-        position: absolute;
-        right: -100%;
+        display: none;
     }
     .menu{
             width: 60%;
