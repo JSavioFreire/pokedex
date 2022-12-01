@@ -17,12 +17,8 @@ const ButtonAdd = ({ data }) => {
             if (data && data.name == val.name) {
                 setHave(true)
             }
-            else if (data && data.name != val.name){
-                setHave(false)
-            }
         })
     })
-
 
     return (
         <ButtonAddS>
